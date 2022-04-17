@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="numToWords.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">          
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                 <div class="nav-link-wrapper">
+                    <a href="calculator.html">Calculator</a>
+                </div>
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="checkapp.html">NumToWords</a>
+                </div>
+                
+            </div>
+            
+            <div class="right-side">
+                <div>Thany Trann</div>
+            </div>
+            
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="profile-content-wrapper">
+                    <div>
+                        <div>
+                            <h1>Number to Word Application</h1> 
+                            <p>Enter number between 0 to 999,999,999,999.99</p>
+                            <input type="text" name="userInput" id="inputId" style="width:200px;">
+                            <input type="submit" value="traslate" onclick="getInputValue();">
+                           
+                        </div>
+                        <div data-text></div>
+                    </div>
+                </div>
+                <div class="profile-content-wrapper">
+                    <h1>Test</h1> 
+                    
+                    <p>Download <a href="https://drive.google.com/file/d/1w77aMj-hn7xRpKnHhKFB8fVoGvSY7Pb7/view?usp=sharing" target="_blank">a test file</a> and upload it using Browse:  </p>
+                    
+                    <div>
+                        <input type="file" name="testInput" id="picker" data-file-upload>
+                        
+                    </div>
+                    <div>
+                        <textarea name="testTextArea" id="testTextAreaID" cols="35" rows="20" data-text-area></textarea>
+                    </div>
+                    <div>
+                        <button data-clear-text>Clear</button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+
+</html>

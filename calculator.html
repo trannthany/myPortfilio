@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="calculator.js" defer></script>
+    <style>
+
+*::before, *::after{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+
+.calculator-grid{
+     background: linear-gradient(-25deg, #aa00ff, #6c00ff );
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 2.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 450px) {
+    .calculator-grid{   
+        min-height: 40vh;
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: minmax(80px, auto) repeat(5, 50px);
+       
+    }
+    .calculator-grid > button{      
+        font-size: 10px;   
+    }
+    .output .previous-operand {      
+        font-size: 12px;
+    }
+
+    .output .current-operand {
+        color: white;
+        font-size: 14px;
+    }  
+
+
+
+}
+
+
+
+
+
+
+
+    </style>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">               
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                 <div class="nav-link-wrapper active-nav-link">
+                    <a href="calculator.html">Calculator</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="checkapp.html">NumToWords</a>
+                </div>
+            </div>
+            
+            <div class="right-side">
+                <div>Thany Trann</div>
+            </div>
+            
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="profile-image-wrapper">
+                    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+            
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>x</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>       
+
+    </div>
+                </div>
+                <div class="profile-content-wrapper">
+                    <h1>This calculator is from Web Dev Simplified
+                    </h1>
+                
+                    <p>Here is the link to his tutorial: <a href="https://www.youtube.com/watch?v=j59qQ7YWLxw" target="_blank"> Web Dev
+                            Simplified
+                        </a> </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>

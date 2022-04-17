@@ -1,0 +1,101 @@
+        /* Master styles */
+        body{
+            margin: 0px;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .container{
+            display: grid;
+            /* 1fr = 1 fraction unit (100%) of grid template columns */
+            grid-template-columns: 1fr;
+        }
+        
+        
+        /* Nav bar styles */
+        .nav-wrapper {
+            /* make the 2 divs inside it stay side by side */
+            display: flex;
+            /* spread the 2 divs apart */
+            justify-content: space-between;
+            padding: 38px; 
+        }
+        
+        .left-side{
+            /* make the 2 divs inside it stay side by side */
+            display: flex;
+        }
+        
+        /* select div that is in .left-side that is inside .nav-wrapper */
+        .nav-wrapper > .left-side > div {
+            margin-right: 20px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        
+        .nav-link-wrapper{
+            height: 22px;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        
+        /* select <a> tag inside .nav-link-wrapper */
+        .nav-link-wrapper a{
+            color: #8a8a8a;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+        /* psodu selector: check for when hover occurs for .nav-link-wrapper */
+        .nav-link-wrapper:hover{
+            border-bottom: 1px solid black;
+        }
+        /* hover for the <a> inside the .nav-link-wrapper */
+        .nav-link-wrapper a:hover{
+            color: black;
+        }
+        
+        /* Nav bar styles end*/
+        
+        .img-text-wrapper:hover .subtitle{
+            font-weight: 600;
+            color: lightseagreen;
+        }
+        
+        .active-nav-link{
+            border-bottom: 1px solid black;
+        }
+        .active-nav-link a{
+            color: black !important;
+        }
+        
+        
+        /* About page style */
+        .two-column-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .profile-image-wrapper img{
+            width: 100%;
+        }
+        .profile-content-wrapper{
+            padding: 10px;
+            
+        }
+        .profile-content-wrapper h1{    
+            color: lightseagreen;
+        }
+        
+        
+                @media (max-width: 450px) {
+                  h1{
+                    
+                    font-size: 12px;
+                  }
+               
+                  p{
+                    font-size: 12px;
+                   
+                  }
+                
+                }
+                
+        
